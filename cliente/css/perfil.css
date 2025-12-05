@@ -1,0 +1,157 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+/* Cabecera con imagen o color corporativo */
+header {
+  height: 180px;
+  background-image: url("img/fondo.jpeg"); /* opcional, como en las prácticas */
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header h1 {
+  color: white;
+  font-size: 2.5em;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Menú de navegación similar al usado en WebTechs */
+nav {
+  background-color: #ffffcc;
+  text-align: center;
+  padding: 10px;
+}
+
+nav a {
+  color: #5d3a00;
+  text-decoration: none;
+  font-size: 18px;
+  margin: 0 15px;
+  padding: 10px 20px;
+  display: inline-block;
+}
+
+nav a:hover {
+  color: white;
+  background-color: #00008b;
+}
+
+/* Contenido principal con dos columnas */
+main {
+  max-width: 1000px;
+  margin: 20px auto;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+/* Bloques laterales */
+.bloque {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+}
+
+.bloque-perfil {
+  flex: 1 1 280px;
+  border-left: 4px solid #004080;
+  border-bottom: 4px solid #004080;
+}
+
+.bloque-formulario {
+  flex: 2 1 400px;
+}
+
+/* Formulario */
+form {
+  margin-top: 10px;
+}
+
+.grupo-form {
+  margin-bottom: 12px;
+  display: flex;
+  flex-direction: column;
+}
+
+.grupo-form label {
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+
+.grupo-form input,
+.grupo-form select,
+.grupo-form textarea {
+  padding: 6px;
+  border-radius: 4px;
+  border: 1px solid #cccccc;
+  font-size: 14px;
+}
+
+.grupo-form input:focus,
+.grupo-form select:focus,
+.grupo-form textarea:focus {
+  outline: none;
+  border-color: #004080;
+}
+
+/* Checkbox en línea */
+.grupo-check {
+  flex-direction: row;
+  align-items: center;
+}
+
+.grupo-check input[type="checkbox"] {
+  margin-right: 8px;
+}
+
+/* Mensajes de error */
+.error {
+  color: #bb0000;
+  font-size: 0.85em;
+  min-height: 1em;
+}
+
+/* Borde rojo cuando hay error */
+.campo-error {
+  border-color: #bb0000 !important;
+}
+
+/* Botón enviar */
+button#btn-enviar {
+  background-color: #004080;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1em;
+  margin-top: 5px;
+}
+
+button#btn-enviar:hover {
+  background-color: #002952;
+}
+
+/* Mensaje de estado de envío */
+.estado-envio {
+  margin-top: 10px;
+  font-size: 0.9em;
+}
+
+/* Pie */
+footer {
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  margin-top: 20px;
+}

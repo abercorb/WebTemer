@@ -1,0 +1,90 @@
+<!-- Autor/a: TU NOMBRE -->
+<!-- Fecha: Diciembre 2025 -->
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/perfil.css" />
+    <title>Perfil de usuario | Monitor de Aire</title>
+  </head>
+  <body>
+    <header>
+      <h1>Monitor de Calidad del Aire</h1>
+    </header>
+
+    <nav>
+      <a href="index.html">Inicio</a>
+      <a href="perfil.html">Perfil</a>
+      <a href="reportes.html">Reportes</a>
+      <a href="Mapainteractivo.html">Mapa interactivo</a>
+      <a href="rutas.html">Reportes</a>
+    </nav>
+
+    <main>
+      <!-- Zona izquierda: info básica de usuario -->
+      <section class="bloque bloque-perfil">
+        <h2>Mi perfil</h2>
+        <p><strong>Nombre:</strong> <span id="nombre-usuario">Usuario demo</span></p>
+        <p><strong>Ciudad favorita para correr:</strong> <span id="ciudad-usuario">Valencia</span></p>
+        <p><strong>Nivel de actividad:</strong> <span id="nivel-usuario">Intermedio</span></p>
+      </section>
+
+      <!-- Zona derecha: formulario de contacto / reporte -->
+      <section class="bloque bloque-formulario">
+        <h2>Contacto y reportes</h2>
+        <p>
+          Utiliza este formulario para enviarnos dudas, sugerencias o informes
+          de problemas en las rutas o en los datos de calidad del aire.
+        </p>
+
+        <form id="form-contacto" novalidate>
+          <div class="grupo-form">
+            <label for="nombre">Nombre *</label>
+            <input type="text" id="nombre" name="nombre" />
+            <span class="error" id="error-nombre"></span>
+          </div>
+
+          <div class="grupo-form">
+            <label for="email">Correo electrónico *</label>
+            <input type="email" id="email" name="email" />
+            <span class="error" id="error-email"></span>
+          </div>
+
+          <div class="grupo-form">
+            <label for="tipo">Tipo de reporte</label>
+            <select id="tipo" name="tipo">
+              <option value="consulta">Consulta general</option>
+              <option value="datos">Error en datos de calidad del aire</option>
+              <option value="ruta">Problema en una ruta</option>
+              <option value="sugerencia">Sugerencia de mejora</option>
+            </select>
+          </div>
+
+          <div class="grupo-form">
+            <label for="mensaje">Mensaje *</label>
+            <textarea id="mensaje" name="mensaje" rows="4"></textarea>
+            <span class="error" id="error-mensaje"></span>
+          </div>
+
+          <div class="grupo-form grupo-check">
+            <input type="checkbox" id="acepto" name="acepto" />
+            <label for="acepto">
+              Acepto la política de privacidad y el tratamiento de mis datos.
+            </label>
+            <span class="error" id="error-acepto"></span>
+          </div>
+
+          <button type="submit" id="btn-enviar">Enviar</button>
+          <p id="estado-envio" class="estado-envio"></p>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <p>2025 Monitor de Aire y Rutas Saludables. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="js/perfil.js"></script>
+  </body>
+</html>
