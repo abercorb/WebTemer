@@ -1,0 +1,316 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f5f5f5;
+}
+
+#ciudad-form {
+  margin: 20px 0;
+}
+
+#ciudad-form input {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+
+#ciudad-form input:focus {
+  outline: none;
+  border-color: #4a90e2;
+}
+
+.botones-container {
+  margin: 20px 0;
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+button {
+  padding: 12px 24px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  background-color: #4a90e2;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.1s;
+}
+
+button:hover {
+  background-color: #357abd;
+  transform: translateY(-2px);
+}
+
+button:active {
+  background-color: #2a5f8f;
+  transform: translateY(0);
+}
+
+#informacion {
+  margin-top: 20px;
+}
+
+.mensaje {
+  padding: 12px;
+  background-color: #e3f2fd;
+  border-left: 4px solid #2196f3;
+  border-radius: 4px;
+  color: #1976d2;
+}
+
+.error {
+  padding: 12px;
+  background-color: #ffebee;
+  border-left: 4px solid #f44336;
+  border-radius: 4px;
+  color: #c62828;
+  font-weight: 500;
+}
+
+.tarjeta {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  margin-top: 20px;
+}
+
+.tarjeta-header {
+  padding: 20px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.tarjeta-header h2 {
+  margin: 0 0 8px 0;
+  font-size: 24px;
+}
+
+.coordenadas {
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+.tarjeta-aire {
+  padding: 24px;
+  color: white;
+}
+
+.aire-header {
+  margin-bottom: 20px;
+}
+
+.aire-header h2 {
+  margin: 0 0 8px 0;
+  font-size: 24px;
+  color: white;
+}
+
+.aire-header .coordenadas {
+  font-size: 14px;
+  opacity: 0.9;
+  color: white;
+}
+
+.aire-contenido {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.aire-icono {
+  font-size: 64px;
+  line-height: 1;
+}
+
+.aire-info {
+  flex: 1;
+}
+
+.aire-titulo {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.aire-aqi {
+  font-size: 20px;
+  margin-bottom: 8px;
+  opacity: 0.95;
+}
+
+.aire-texto {
+  font-size: 16px;
+  opacity: 0.9;
+}
+
+.tarjeta-temperatura {
+  padding: 24px;
+  color: white;
+}
+
+.temperatura-header {
+  margin-bottom: 20px;
+}
+
+.temperatura-header h2 {
+  margin: 0 0 8px 0;
+  font-size: 24px;
+  color: white;
+}
+
+.temperatura-header .coordenadas {
+  font-size: 14px;
+  opacity: 0.9;
+  color: white;
+}
+
+.temperatura-contenido {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.temperatura-icono {
+  font-size: 64px;
+  line-height: 1;
+}
+
+.temperatura-info {
+  flex: 1;
+}
+
+.temperatura-valor {
+  font-size: 48px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.temperatura-descripcion {
+  font-size: 18px;
+  opacity: 0.95;
+  text-transform: capitalize;
+}
+
+#map-container {
+  margin-top: 30px;
+  width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  background: white;
+  padding: 4px;
+}
+
+#mapa-iframe {
+  width: 100%;
+  height: 450px;
+  border: none;
+  border-radius: 8px;
+  display: block;
+}
+
+.pronostico-seccion,
+.pronostico-aire-seccion,
+.historial-seccion {
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  margin-top: 20px;
+}
+
+.pronostico-seccion h3,
+.pronostico-aire-seccion h3,
+.historial-seccion h3 {
+  margin: 0 0 15px 0;
+  font-size: 18px;
+  color: white;
+  font-weight: 600;
+}
+
+.pronostico-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 12px;
+}
+
+.pronostico-item {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 12px;
+  border-radius: 8px;
+  text-align: center;
+  color: white;
+}
+
+.pronostico-hora {
+  font-size: 14px;
+  opacity: 0.9;
+  margin-bottom: 8px;
+}
+
+.pronostico-temp {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+
+.pronostico-desc {
+  font-size: 12px;
+  opacity: 0.9;
+  text-transform: capitalize;
+}
+
+.pronostico-aire-container,
+.historial-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 12px;
+}
+
+.pronostico-aire-item,
+.historial-item {
+  padding: 12px;
+  border-radius: 8px;
+  text-align: center;
+  color: white;
+}
+
+.pronostico-icono,
+.historial-icono {
+  font-size: 32px;
+  margin: 8px 0;
+}
+
+.pronostico-titulo,
+.historial-titulo {
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+
+.pronostico-aqi,
+.historial-aqi {
+  font-size: 12px;
+  opacity: 0.95;
+}
+
+@media (max-width: 768px) {
+  #mapa-iframe {
+    height: 350px;
+  }
+  
+  body {
+    padding: 15px;
+  }
+
+  .pronostico-container,
+  .pronostico-aire-container,
+  .historial-container {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  }
+}
