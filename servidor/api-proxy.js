@@ -1,12 +1,5 @@
 const express = require("express");
-const app = express();
-
-// CORS: permitir peticiones desde cualquier origen
-app.use(function (_req, res, next) {
-  res.setHeader("Access-Control-Allow-Origin", "*");
-  res.setHeader("Access-Control-Allow-Methods", "GET");
-  next();
-});
+const router = express.Router();
 
 const API_KEY = process.env.OPENWEATHER_KEY || "a7f577873f6d0180d28cda832841326c";
 
@@ -35,7 +28,7 @@ async function obtenerCoordenadas(ciudad) {
 }
 
 // Ruta: /proxy-aire/Madrid
-app.get("/proxy-aire/:city", async (req, res) => {
+router.get("/proxy-aire/:city", async (req, res) => {
   if (!API_KEY) {
     return res.status(500).json({ error: "Falta la variable OPENWEATHER_KEY" });
   }
@@ -122,7 +115,7 @@ app.get("/proxy-aire/:city", async (req, res) => {
 });
 
 // Ruta: /proxy-temperatura/Madrid
-app.get("/proxy-temperatura/:city", async (req, res) => {
+router.get("/proxy-temperatura/:city", async (req, res) => {
   if (!API_KEY) {
     return res.status(500).json({ error: "Falta la variable OPENWEATHER_KEY" });
   }
@@ -213,7 +206,7 @@ app.get("/proxy-temperatura/:city", async (req, res) => {
 });
 
 // Ruta: /proxy-pronostico/Madrid
-app.get("/proxy-pronostico/:city", async (req, res) => {
+router.get("/proxy-pronostico/:city", async (req, res) => {
   if (!API_KEY) {
     return res.status(500).json({ error: "Falta la variable OPENWEATHER_KEY" });
   }
@@ -257,7 +250,7 @@ app.get("/proxy-pronostico/:city", async (req, res) => {
 });
 
 // Ruta: /proxy-pronostico-aire/Madrid
-app.get("/proxy-pronostico-aire/:city", async (req, res) => {
+router.get("/proxy-pronostico-aire/:city", async (req, res) => {
   if (!API_KEY) {
     return res.status(500).json({ error: "Falta la variable OPENWEATHER_KEY" });
   }
@@ -300,7 +293,7 @@ app.get("/proxy-pronostico-aire/:city", async (req, res) => {
 });
 
 // Ruta: /proxy-historial-aire/Madrid
-app.get("/proxy-historial-aire/:city", async (req, res) => {
+router.get("/proxy-historial-aire/:city", async (req, res) => {
   if (!API_KEY) {
     return res.status(500).json({ error: "Falta la variable OPENWEATHER_KEY" });
   }
@@ -351,7 +344,7 @@ app.get("/proxy-historial-aire/:city", async (req, res) => {
 });
 
 // Ruta: /proxy-direccion/Madrid
-app.get("/proxy-direccion/:city", async (req, res) => {
+router.get("/proxy-direccion/:city", async (req, res) => {
   if (!API_KEY) {
     return res.status(500).json({ error: "Falta la variable OPENWEATHER_KEY" });
   }
@@ -396,17 +389,9 @@ app.get("/proxy-direccion/:city", async (req, res) => {
 });
 
 // Alias para errores de tipeo
-app.get("/proxy_peratura/:city", async (req, res) => {
+router.get("/proxy_peratura/:city", async (req, res) => {
   res.redirect(301, "/proxy-temperatura/" + encodeURIComponent(req.params.city));
 });
 
-// Manejar rutas no encontradas (404)
-app.use(function (req, res) {
-  res.status(404).json({ error: "Ruta no encontrada: " + req.path });
-});
-
-// Arrancar el servidor
-const PUERTO = process.env.PORT || 3001;
-app.listen(PUERTO, () => {
-  console.log("Servidor proxy escuchando en http://localhost:" + PUERTO);
-});
+// Exportar el router para que app.js lo use
+module.exports = router;
