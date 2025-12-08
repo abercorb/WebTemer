@@ -182,12 +182,12 @@ main {
   transform: translateY(-1px);
 }
 
-.btn--primary {
+.btn_productos {
   background-color: #059669;
   color: white;
   border-color: #059669;
 }
-.btn--ghost {
+.btn_compra {
   background-color: #059669;
   color: white;
   border-color: #059669;
