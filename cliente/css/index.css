@@ -282,32 +282,3 @@ main {
   font-size: 0.9rem;
   color: #99ce79;
 }
-
-/* ===== Responsive ===== */
-@media (max-width: 900px) {
-  .seccion1 {
-    grid-template-columns: minmax(0, 1fr);
-  }
-
-  .imagen1_fondo img {
-    max-height: 260px;
-  }
-
-  .campañas_seccion {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-}
-
-@media (max-width: 640px) {
-  main {
-    margin-top: 1rem;
-  }
-
-  .campañas_seccion {
-    grid-template-columns: minmax(0, 1fr);
-  }
-
-  .titulo_seccion1 h1 {
-    font-size: 1.7rem;
-  }
-}
