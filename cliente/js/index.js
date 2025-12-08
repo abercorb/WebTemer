@@ -1,25 +1,25 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const burger = document.getElementById("burger");
-  const navMenu = document.getElementById("nav-menu");
-  const navOverlay = document.getElementById("nav-overlay");
-  const odsBtn = document.getElementById("ods-more-btn");
-  const odsExtra = document.getElementById("ods-extra");
+  const menuBtn = document.getElementById("menu");
+  const navMenu = document.getElementById("nav_menu");
+  const navOverlay = document.getElementById("nav_overlay");
+  const odsBtn = document.getElementById("btn_ods_extra");
+  const odsExtra = document.getElementById("ods_extra");
 
   function abrirMenu() {
-    navMenu.classList.add("nav-menu--open");
-    navOverlay.classList.add("nav-overlay--visible");
-    burger.setAttribute("aria-expanded", "true");
+    navMenu.classList.add("nav_menu--open");
+    navOverlay.classList.add("nav_overlay--visible");
+    menuBtn.setAttribute("aria-expanded", "true");
   }
 
   function cerrarMenu() {
-    navMenu.classList.remove("nav-menu--open");
-    navOverlay.classList.remove("nav-overlay--visible");
-    burger.setAttribute("aria-expanded", "false");
+    navMenu.classList.remove("nav_menu--open");
+    navOverlay.classList.remove("nav_overlay--visible");
+    menuBtn.setAttribute("aria-expanded", "false");
   }
 
-  if (burger) {
-    burger.addEventListener("click", function () {
-      const abierto = navMenu.classList.contains("nav-menu--open");
+  if (menuBtn) {
+    menuBtn.addEventListener("click", function () {
+      const abierto = navMenu.classList.contains("nav_menu--open");
       if (abierto) {
         cerrarMenu();
       } else {
@@ -40,12 +40,12 @@ document.addEventListener("DOMContentLoaded", function () {
   // Mostrar / ocultar texto extra ODS
   if (odsBtn && odsExtra) {
     odsBtn.addEventListener("click", function () {
-      const oculto = odsExtra.classList.contains("ods__extra--hidden");
+      const oculto = odsExtra.classList.contains("ods_extra_escondido");
       if (oculto) {
-        odsExtra.classList.remove("ods__extra--hidden");
+        odsExtra.classList.remove("ods_extra_escondido");
         odsBtn.textContent = "Ocultar información";
       } else {
-        odsExtra.classList.add("ods__extra--hidden");
+        odsExtra.classList.add("ods_extra_escondido");
         odsBtn.textContent = "Saber más sobre nuestro impacto";
       }
     });
