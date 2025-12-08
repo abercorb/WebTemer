@@ -1,0 +1,328 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, sans-serif;
+  background-color: #f5f7fa;
+  color: #1f2933;
+  line-height: 1.5;
+}
+
+/* ===== Topbar ===== */
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: #ffffff;
+  border-bottom: 1px solid #e1e4e8;
+  padding: 0.6rem 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.topbar__logo {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.topbar__logo img {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+}
+
+.topbar__logo span {
+  font-weight: 700;
+  font-size: 1.1rem;
+  letter-spacing: 0.04em;
+}
+
+/* Botón hamburguesa (tres rayas) */
+.topbar__burger {
+  width: 40px;
+  height: 32px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.topbar__burger span {
+  display: block;
+  height: 3px;
+  border-radius: 999px;
+  background-color: #111827;
+}
+
+/* ===== Menú desplegable ===== */
+.nav-menu {
+  position: fixed;
+  top: 0;
+  right: -260px; /* oculto inicialmente */
+  width: 260px;
+  height: 100vh;
+  background-color: #ffffff;
+  box-shadow: -2px 0 10px rgba(15, 23, 42, 0.18);
+  padding: 4rem 1.5rem 1.5rem;
+  transition: right 0.3s ease-in-out;
+  z-index: 1001;
+}
+
+.nav-menu ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.nav-menu a {
+  text-decoration: none;
+  color: #111827;
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+.nav-menu a:hover {
+  color: #059669; /* verde sostenible */
+}
+
+/* Menú abierto */
+.nav-menu--open {
+  right: 0;
+}
+
+/* Fondo oscuro al abrir menú */
+.nav-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(15, 23, 42, 0.5);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease-in-out;
+  z-index: 1000;
+}
+
+.nav-overlay--visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* ===== Layout general ===== */
+main {
+  max-width: 1100px;
+  margin: 1.5rem auto 2.5rem;
+  padding: 0 1rem;
+}
+
+/* ===== Hero ===== */
+.hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1.2fr);
+  gap: 1.5rem;
+  align-items: center;
+  margin-bottom: 2.5rem;
+}
+
+.hero__image img {
+  width: 100%;
+  border-radius: 18px;
+  object-fit: cover;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.18);
+}
+
+.hero__content h1 {
+  font-size: 2.1rem;
+  margin-bottom: 0.8rem;
+}
+
+.hero__content p {
+  margin-bottom: 0.6rem;
+  color: #4b5563;
+}
+
+.hero__ods {
+  font-weight: 600;
+  color: #059669;
+  margin-bottom: 1rem;
+}
+
+.hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+}
+
+/* Botones reutilizables */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  padding: 0.55rem 1.3rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: none;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: background-color 0.15s ease, color 0.15s ease,
+    border-color 0.15s ease, transform 0.05s ease;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+}
+
+.btn--primary {
+  background-color: #059669;
+  color: white;
+  border-color: #059669;
+}
+
+.btn--primary{
+  background-color: #047857;
+  color: white;
+  border-color: #047857;
+}
+
+.btn--ghost {
+  background-color: #047857;
+  color: white;
+  border-color: #047857;
+}
+
+/* ===== Section headers ===== */
+.section-header {
+  margin-bottom: 1.1rem;
+}
+
+.section-header h2 {
+  font-size: 1.6rem;
+  margin-bottom: 0.2rem;
+}
+
+.section-header p {
+  color: #6b7280;
+}
+
+/* ===== Campaigns ===== */
+.campaigns {
+  margin-bottom: 2.5rem;
+}
+
+.campaigns__grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.4rem;
+}
+
+.campaign-card {
+  background-color: #ffffff;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 6px 22px rgba(15, 23, 42, 0.08);
+  display: flex;
+  flex-direction: column;
+}
+
+.campaign-card img {
+  width: 100%;
+  height: 170px;
+  object-fit: cover;
+}
+
+.campaign-card__body {
+  padding: 0.9rem 1rem 1rem;
+}
+
+.campaign-card__body h3 {
+  margin-bottom: 0.4rem;
+  font-size: 1.1rem;
+}
+
+.campaign-card__body p {
+  color: #4b5563;
+  font-size: 0.95rem;
+}
+
+.campaign-card__tag {
+  margin-top: 0.6rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #059669;
+}
+
+.btn--secondary {
+  background-color: #111827;
+  color: #f9fafb;
+  border-color: #111827;
+}
+
+.btn--secondary:hover {
+  background-color: #374151;
+}
+
+/* texto extra ODS */
+.ods__extra {
+  margin-top: 0.8rem;
+  background-color: #f9fafb;
+  border-radius: 10px;
+  padding: 0.85rem 1rem;
+  border: 1px solid #e5e7eb;
+  color: #374151;
+}
+
+.ods__extra--hidden {
+  display: none;
+}
+
+/* ===== Footer ===== */
+.footer {
+  border-top: 1px solid #e5e7eb;
+  padding: 1rem 1.2rem;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #73806b;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 900px) {
+  .hero {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .hero__image img {
+    max-height: 260px;
+  }
+
+  .campaigns__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .ods__content {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  main {
+    margin-top: 1rem;
+  }
+
+  .campaigns__grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .hero__content h1 {
+    font-size: 1.7rem;
+  }
+}

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>SportEco | Material deportivo sostenible</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/index.css" />
+    <script defer src="js/index.js"></script>
+  </head>
+  <body>
+    <!-- Barra superior con logo + menú hamburguesa -->
+    <header class="topbar">
+      <div class="topbar__logo">
+        <img src="img/logo_sporteco.png" alt="Logo de SportEco" />
+        <span>SportEco</span>
+      </div>
+
+      <!-- Botón de las tres rayas -->
+      <button
+        class="topbar__burger"
+        id="burger"
+        aria-label="Abrir menú de navegación"
+        aria-expanded="false"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <!-- Menú oculto que aparece al pulsar las tres rayas -->
+      <nav class="nav-menu" id="nav-menu" aria-label="Navegación principal">
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="productos.html">Productos sostenibles</a></li>
+          <li><a href="compra.html">Compra tu pack</a></li>
+          <li><a href="contacto.html">Contacto y soporte</a></li>
+        </ul>
+      </nav>
+
+      <!-- Fondo oscuro cuando el menú está abierto (para móvil/tablet) -->
+      <div class="nav-overlay" id="nav-overlay"></div>
+    </header>
+
+    <main>
+      <!-- HERO: imagen grande + mensaje -->
+      <section class="hero">
+        <div class="hero__image">
+          <!-- Imagen grande de fondo (deporte al aire libre) -->
+          <img
+            src="img/fondo_corriendo.jpg"
+          />
+        </div>
+        <div class="hero__content">
+          <h1>Haz deporte. Cuida el planeta.</h1>
+          <p>
+            SportEco es tu tienda de material deportivo sostenible: zapatillas
+            recicladas, camisetas orgánicas y accesorios de proximidad.
+          </p>
+          <p class="hero__ods">
+            Alineado inequivocamente con los propósitos ecológicos y saludables.
+          </p>
+          <div class="hero__actions">
+            <a href="productos.html" class="btn btn--primary">
+              Ver productos sostenibles
+            </a>
+            <a href="compra.html" class="btn btn--ghost">
+              Crear mi pack eco
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Campañas principales: correr, gym, montaña -->
+      <section class="campaigns" aria-labelledby="campanias-titulo">
+        <div class="section-header">
+          <h2 id="campanias-titulo">Campañas SportEco</h2>
+          <p>
+            Descubre nuestras colecciones de material deportivo que cuidan de tu
+            salud y del medio ambiente.
+          </p>
+        </div>
+
+        <div class="campaigns__grid">
+          <article class="campaign-card">
+            <img
+              src="img/zapatillas.jpg"
+              alt="Zapatillas y ropa de running sostenible"
+            />
+            <div class="campaign-card__body">
+              <h3>Corre más verde</h3>
+              <p>
+                Colección de running con zapatillas de materiales reciclados y
+                tejidos transpirables de origen responsable.
+              </p>
+            </div>
+          </article>
+
+          <article class="campaign-card">
+            <img
+              src="img/botella_reutilizable.jpg"
+              alt="Esterilla y accesorios de gimnasio sostenibles"
+            />
+            <div class="campaign-card__body">
+              <h3>Gym sin residuos</h3>
+              <p>
+                Botellas reutilizables, esterillas recicladas y accesorios
+                duraderos para entrenar con menos plástico.
+              </p
+            </div>
+          </article>
+
+          <article class="campaign-card">
+            <img
+              src="img/ropa_sostenible.jpg"
+              alt="Ropa técnica para montaña producido localmente"
+            />
+            <div class="campaign-card__body">
+              <h3>Montaña kilómetro cero</h3>
+              <p>
+                Ropa técnica producida localmente para tus rutas de senderismo,
+                reduciendo transporte y emisiones.
+              </p>
+            </div>
+          </article>
+        </div>
+      </section>
+        <!-- Botón que muestra texto extra con JS -->
+        <button type="button" id="ods-more-btn" class="btn btn--secondary">
+          Saber más sobre nuestro impacto
+        </button>
+
+        <div id="ods-extra" class="ods__extra ods__extra--hidden">
+          <p>
+            Cada colección de SportEco está pensada para reducir residuos,
+            apoyar economías locales y fomentar estilos de vida saludables. En
+            el resto de páginas verás cómo aplicamos estos principios en nuestro
+            catálogo, en los packs que te proponemos y en el soporte al
+            deportista.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>
+        &copy; 2025 SportEco · Proyecto web alineado con el futuro sostenible
+      </p>
+    </footer>
+  </body>
+</html>
