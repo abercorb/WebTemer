@@ -5,6 +5,8 @@
   margin: 0;
   padding: 0;
 }
+/*Unifica punto de partida de proyecto,
+para que el alienado sea correcto */
 
 body {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
