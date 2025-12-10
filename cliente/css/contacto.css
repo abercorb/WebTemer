@@ -1,0 +1,275 @@
+/* ===== Contacto - Estilos minimalistas ===== */
+
+/* ===== Cabecera de contacto ===== */
+.contacto_cabecera {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+}
+
+.contacto_cabecera h1 {
+    font-size: 1.8rem;
+    color: #111827;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.contacto_cabecera>p {
+    color: #6b7280;
+    font-size: 1rem;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+/* ===== Sección ODS ===== */
+.ods_seccion {
+    margin-bottom: 2rem;
+}
+
+.ods_contenedor {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+}
+
+.ods_item {
+    padding: 1rem;
+    background-color: #f9fafb;
+    border-radius: 8px;
+    border: 1px solid #e5e7eb;
+}
+
+.ods_badge {
+    display: inline-block;
+    padding: 0.3rem 0.6rem;
+    background-color: #059669;
+    color: white;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.ods_badge_12 {
+    background-color: #ca8a04;
+}
+
+.ods_item p {
+    font-size: 0.9rem;
+    color: #4b5563;
+    line-height: 1.5;
+}
+
+/* ===== Contenedor de formularios ===== */
+.formularios_contenedor {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 1.5rem;
+}
+
+/* ===== Sección de formulario ===== */
+.formulario_seccion {
+    background-color: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    padding: 1.5rem;
+}
+
+.formulario_seccion h2 {
+    font-size: 1.2rem;
+    color: #111827;
+    margin-bottom: 0.3rem;
+    font-weight: 600;
+}
+
+.formulario_intro {
+    font-size: 0.9rem;
+    color: #6b7280;
+    margin-bottom: 1.25rem;
+}
+
+/* ===== Campos del formulario ===== */
+.campo {
+    margin-bottom: 1rem;
+}
+
+.campo label {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: #374151;
+    margin-bottom: 0.3rem;
+}
+
+.requerido {
+    color: #dc2626;
+}
+
+.campo input,
+.campo select,
+.campo textarea {
+    width: 100%;
+    padding: 0.6rem 0.75rem;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    font-family: inherit;
+    background-color: #ffffff;
+    transition: border-color 0.15s ease;
+}
+
+.campo input:focus,
+.campo select:focus,
+.campo textarea:focus {
+    outline: none;
+    border-color: #059669;
+}
+
+.campo input.invalido,
+.campo select.invalido,
+.campo textarea.invalido {
+    border-color: #dc2626;
+}
+
+.campo textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+/* ===== Mensajes de error ===== */
+.error {
+    font-size: 0.8rem;
+    color: #dc2626;
+    margin-top: 0.25rem;
+    min-height: 1.2em;
+}
+
+/* ===== Checkboxes ===== */
+.checkbox_grupo {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: 0.3rem;
+}
+
+.checkbox_label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+    color: #374151;
+    cursor: pointer;
+}
+
+.checkbox_label input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    accent-color: #059669;
+}
+
+/* ===== Botón enviar ===== */
+.btn_enviar {
+    width: 100%;
+    background-color: #059669;
+    color: white;
+    border: none;
+    padding: 0.7rem 1rem;
+    font-size: 0.95rem;
+    font-weight: 500;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.15s ease;
+    margin-top: 0.5rem;
+}
+
+.btn_enviar:hover {
+    background-color: #047857;
+}
+
+.btn_enviar:disabled {
+    background-color: #9ca3af;
+    cursor: not-allowed;
+}
+
+/* ===== Mensaje de éxito ===== */
+.mensaje_exito {
+    margin-top: 1rem;
+    padding: 1rem;
+    background-color: #ecfdf5;
+    border: 1px solid #a7f3d0;
+    border-radius: 6px;
+}
+
+.mensaje_exito p {
+    font-size: 0.9rem;
+    color: #065f46;
+    font-weight: 500;
+}
+
+.oculto {
+    display: none;
+}
+
+/* ===== Resumen del perfil ===== */
+.resumen_perfil {
+    margin-top: 1.5rem;
+    padding: 1rem;
+    background-color: #f9fafb;
+    border-radius: 8px;
+    border: 1px solid #e5e7eb;
+}
+
+.resumen_perfil h3 {
+    font-size: 1rem;
+    color: #111827;
+    margin-bottom: 0.75rem;
+    font-weight: 600;
+}
+
+#resumen_contenido {
+    font-size: 0.9rem;
+    color: #374151;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+#resumen_contenido p {
+    margin-bottom: 0.3rem;
+}
+
+#recomendaciones {
+    padding-top: 0.75rem;
+    border-top: 1px solid #e5e7eb;
+}
+
+#recomendaciones h4 {
+    font-size: 0.9rem;
+    color: #111827;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+#recomendaciones p {
+    font-size: 0.85rem;
+    color: #059669;
+}
+
+#recomendaciones a {
+    color: #059669;
+    text-decoration: underline;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+    .contacto_cabecera h1 {
+        font-size: 1.4rem;
+    }
+
+    .formularios_contenedor {
+        grid-template-columns: 1fr;
+    }
+
+    .formulario_seccion {
+        padding: 1rem;
+    }
+}

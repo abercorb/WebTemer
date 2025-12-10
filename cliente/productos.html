@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Productos Sostenibles | SportEco</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description"
+        content="Catálogo de material deportivo sostenible: zapatillas recicladas, camisetas orgánicas y accesorios de proximidad. Contribuye al ODS 12." />
+    <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="css/productos.css" />
+    <script defer src="js/index.js"></script>
+    <script defer src="js/productos.js"></script>
+</head>
+
+<body>
+    <!-- Barra superior con logo + menú hamburguesa -->
+    <header class="topbar">
+        <div class="topbar_logo">
+            <img src="img/logo_sporteco.png" alt="Logo de SportEco" />
+            <span>SportEco</span>
+        </div>
+
+        <!-- Botón de las tres rayas -->
+        <button class="topbar_menu" id="menu" aria-label="Abrir menú de navegación" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <!-- Menú oculto que aparece al pulsar las tres rayas -->
+        <nav class="nav_menu" id="nav_menu" aria-label="Navegación principal">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="productos.html" class="nav_activo">Productos sostenibles</a></li>
+                <li><a href="compra.html">Compra tu pack</a></li>
+                <li><a href="contacto.html">Contacto y soporte</a></li>
+            </ul>
+        </nav>
+
+        <!-- Fondo oscuro cuando el menú está abierto (para móvil/tablet) -->
+        <div class="nav_overlay" id="nav_overlay"></div>
+    </header>
+
+    <main>
+        <!-- Cabecera de la página -->
+        <section class="productos_cabecera">
+            <h1>Catálogo de Productos Sostenibles</h1>
+            <p>Equipamiento deportivo que cuida de tu salud y del planeta. Cada producto muestra su impacto ambiental.
+            </p>
+
+            <!-- Información ODS -->
+            <div class="ods_info">
+                <div class="ods_badge ods_12">
+                    <span class="ods_numero">ODS 12</span>
+                    <span class="ods_texto">Producción y consumo responsables</span>
+                </div>
+                <p class="ods_descripcion">
+                    Nuestros productos sostenibles están fabricados con materiales reciclados, orgánicos o de
+                    proximidad,
+                    reduciendo la huella de carbono y fomentando un consumo responsable.
+                </p>
+            </div>
+        </section>
+
+        <!-- Filtros -->
+        <section class="filtros_seccion">
+            <h2 class="sr-only">Filtros de productos</h2>
+
+            <div class="filtros_contenedor">
+                <!-- Filtro por categoría -->
+                <div class="filtro_grupo">
+                    <label for="filtro_categoria">Categoría:</label>
+                    <select id="filtro_categoria">
+                        <option value="todas">Todas</option>
+                        <option value="correr">Correr</option>
+                        <option value="gym">Gym</option>
+                        <option value="montana">Montaña</option>
+                    </select>
+                </div>
+
+                <!-- Filtro por material -->
+                <div class="filtro_grupo">
+                    <label for="filtro_material">Material:</label>
+                    <select id="filtro_material">
+                        <option value="todos">Todos</option>
+                        <option value="reciclado">Reciclado</option>
+                        <option value="organico">Orgánico</option>
+                        <option value="local">Local (Km 0)</option>
+                    </select>
+                </div>
+
+                <!-- Filtro por precio -->
+                <div class="filtro_grupo">
+                    <label for="filtro_precio">Precio:</label>
+                    <select id="filtro_precio">
+                        <option value="todos">Todos</option>
+                        <option value="0-25">Hasta 25€</option>
+                        <option value="25-50">25€ - 50€</option>
+                        <option value="50-100">50€ - 100€</option>
+                    </select>
+                </div>
+
+                <!-- Botón limpiar filtros -->
+                <button type="button" id="btn_limpiar_filtros" class="btn btn_limpiar">
+                    Limpiar filtros
+                </button>
+            </div>
+
+            <!-- Contador de resultados -->
+            <div class="filtros_resultados">
+                <span id="contador_productos">Cargando productos...</span>
+                <button type="button" id="btn_ver_favoritos" class="btn btn_favoritos">
+                    Favoritos (<span id="contador_favoritos">0</span>)
+                </button>
+            </div>
+        </section>
+
+        <!-- Grid de productos -->
+        <section class="productos_grid_seccion">
+            <h2 class="sr-only">Listado de productos</h2>
+            <div id="productos_grid" class="productos_grid">
+                <!-- Los productos se cargan dinámicamente con JavaScript -->
+                <p class="productos_cargando">Cargando catálogo...</p>
+            </div>
+        </section>
+
+        <!-- Modal de favoritos -->
+        <div id="modal_favoritos" class="modal" aria-hidden="true">
+            <div class="modal_contenido">
+                <button type="button" id="cerrar_modal" class="modal_cerrar" aria-label="Cerrar">×</button>
+                <h2>Mis Productos Favoritos</h2>
+                <div id="lista_favoritos" class="lista_favoritos">
+                    <p>No tienes productos favoritos guardados.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>
+            &copy; 2025 SportEco · Proyecto web alineado con el futuro sostenible
+        </p>
+    </footer>
+</body>
+
+</html>

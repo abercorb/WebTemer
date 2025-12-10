@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Contacto y Soporte | SportEco</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description"
+        content="Contacta con SportEco para consultas sobre productos sostenibles, pedidos o sugerencias. Crea tu perfil deportivo." />
+    <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="css/contacto.css" />
+    <script defer src="js/index.js"></script>
+    <script defer src="js/contacto.js"></script>
+</head>
+
+<body>
+    <!-- Barra superior con logo + menú hamburguesa -->
+    <header class="topbar">
+        <div class="topbar_logo">
+            <img src="img/logo_sporteco.png" alt="Logo de SportEco" />
+            <span>SportEco</span>
+        </div>
+
+        <button class="topbar_menu" id="menu" aria-label="Abrir menú de navegación" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <nav class="nav_menu" id="nav_menu" aria-label="Navegación principal">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="productos.html">Productos sostenibles</a></li>
+                <li><a href="compra.html">Compra tu pack</a></li>
+                <li><a href="contacto.html" class="nav_activo">Contacto y soporte</a></li>
+            </ul>
+        </nav>
+
+        <div class="nav_overlay" id="nav_overlay"></div>
+    </header>
+
+    <main>
+        <!-- Cabecera de la página -->
+        <section class="contacto_cabecera">
+            <h1>Contacto y Soporte</h1>
+            <p>¿Tienes alguna duda o sugerencia? Estamos aquí para ayudarte en tu camino hacia un deporte más
+                sostenible.</p>
+        </section>
+
+        <!-- Información ODS -->
+        <section class="ods_seccion">
+            <div class="ods_contenedor">
+                <div class="ods_item">
+                    <span class="ods_badge">ODS 3</span>
+                    <p>Promovemos la salud y el bienestar a través del deporte regular y equipamiento de calidad.</p>
+                </div>
+                <div class="ods_item">
+                    <span class="ods_badge ods_badge_12">ODS 12</span>
+                    <p>Te ayudamos a elegir equipamiento sostenible para reducir tu impacto ambiental.</p>
+                </div>
+            </div>
+        </section>
+
+        <div class="formularios_contenedor">
+            <!-- Formulario de contacto -->
+            <section class="formulario_seccion">
+                <h2>Formulario de Contacto</h2>
+                <p class="formulario_intro">Envíanos tu consulta y te responderemos lo antes posible.</p>
+
+                <form id="form_contacto" novalidate>
+                    <div class="campo">
+                        <label for="contacto_nombre">Nombre <span class="requerido">*</span></label>
+                        <input type="text" id="contacto_nombre" name="nombre" required placeholder="Tu nombre completo"
+                            autocomplete="name">
+                        <p class="error" id="error_nombre"></p>
+                    </div>
+
+                    <div class="campo">
+                        <label for="contacto_email">Email <span class="requerido">*</span></label>
+                        <input type="email" id="contacto_email" name="email" required placeholder="tu@email.com"
+                            autocomplete="email">
+                        <p class="error" id="error_email"></p>
+                    </div>
+
+                    <div class="campo">
+                        <label for="contacto_tema">Tema <span class="requerido">*</span></label>
+                        <select id="contacto_tema" name="tema" required>
+                            <option value="">Selecciona un tema</option>
+                            <option value="producto">Duda sobre producto</option>
+                            <option value="pedido">Problema con pedido</option>
+                            <option value="sugerencia">Sugerencia</option>
+                            <option value="otro">Otro</option>
+                        </select>
+                        <p class="error" id="error_tema"></p>
+                    </div>
+
+                    <div class="campo">
+                        <label for="contacto_mensaje">Mensaje <span class="requerido">*</span></label>
+                        <textarea id="contacto_mensaje" name="mensaje" required rows="4"
+                            placeholder="Escribe tu mensaje aquí (mínimo 20 caracteres)"></textarea>
+                        <p class="error" id="error_mensaje"></p>
+                    </div>
+
+                    <button type="submit" class="btn btn_enviar">Enviar consulta</button>
+                </form>
+
+                <div id="exito_contacto" class="mensaje_exito oculto">
+                    <p>Tu consulta ha sido enviada correctamente. Te responderemos pronto.</p>
+                </div>
+            </section>
+
+            <!-- Formulario de perfil deportivo -->
+            <section class="formulario_seccion">
+                <h2>Tu Perfil Deportivo</h2>
+                <p class="formulario_intro">Cuéntanos sobre ti para recomendarte el equipamiento ideal.</p>
+
+                <form id="form_perfil" novalidate>
+                    <div class="campo">
+                        <label for="perfil_deporte">Deporte principal <span class="requerido">*</span></label>
+                        <select id="perfil_deporte" name="deporte" required>
+                            <option value="">Selecciona tu deporte</option>
+                            <option value="running">Running</option>
+                            <option value="gym">Gimnasio</option>
+                            <option value="senderismo">Senderismo / Montaña</option>
+                            <option value="ciclismo">Ciclismo</option>
+                            <option value="yoga">Yoga / Pilates</option>
+                            <option value="natacion">Natación</option>
+                            <option value="otro">Otro</option>
+                        </select>
+                        <p class="error" id="error_deporte"></p>
+                    </div>
+
+                    <div class="campo">
+                        <label for="perfil_nivel">Nivel <span class="requerido">*</span></label>
+                        <select id="perfil_nivel" name="nivel" required>
+                            <option value="">Selecciona tu nivel</option>
+                            <option value="principiante">Principiante</option>
+                            <option value="intermedio">Intermedio</option>
+                            <option value="avanzado">Avanzado</option>
+                        </select>
+                        <p class="error" id="error_nivel"></p>
+                    </div>
+
+                    <div class="campo">
+                        <label for="perfil_frecuencia">Frecuencia semanal <span class="requerido">*</span></label>
+                        <select id="perfil_frecuencia" name="frecuencia" required>
+                            <option value="">¿Cuántas veces entrenas?</option>
+                            <option value="1-2">1-2 veces por semana</option>
+                            <option value="3-4">3-4 veces por semana</option>
+                            <option value="5+">5 o más veces por semana</option>
+                        </select>
+                        <p class="error" id="error_frecuencia"></p>
+                    </div>
+
+                    <div class="campo">
+                        <label>Objetivos (selecciona los que apliquen)</label>
+                        <div class="checkbox_grupo">
+                            <label class="checkbox_label">
+                                <input type="checkbox" name="objetivos" value="salud">
+                                Mejorar mi salud
+                            </label>
+                            <label class="checkbox_label">
+                                <input type="checkbox" name="objetivos" value="rendimiento">
+                                Mejorar rendimiento
+                            </label>
+                            <label class="checkbox_label">
+                                <input type="checkbox" name="objetivos" value="huella">
+                                Reducir huella ambiental
+                            </label>
+                            <label class="checkbox_label">
+                                <input type="checkbox" name="objetivos" value="bienestar">
+                                Bienestar mental
+                            </label>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn btn_enviar">Guardar perfil</button>
+                </form>
+
+                <div id="exito_perfil" class="mensaje_exito oculto">
+                    <p>Tu perfil deportivo ha sido guardado.</p>
+                </div>
+
+                <!-- Resumen del perfil -->
+                <div id="resumen_perfil" class="resumen_perfil oculto">
+                    <h3>Tu resumen</h3>
+                    <div id="resumen_contenido"></div>
+                    <div id="recomendaciones"></div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>
+            &copy; 2025 SportEco · Proyecto web alineado con el futuro sostenible
+        </p>
+    </footer>
+</body>
+
+</html>

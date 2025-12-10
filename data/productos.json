@@ -1,0 +1,194 @@
+[
+    {
+        "id": 1,
+        "nombre": "Zapatillas EcoRun",
+        "descripcion": "Zapatillas de running fabricadas con plástico oceánico reciclado y suela de caucho natural.",
+        "precio": 89.99,
+        "categoria": "correr",
+        "material": "reciclado",
+        "etiquetas": [
+            "baja-huella",
+            "reciclado"
+        ],
+        "co2Ahorrado": 4.2,
+        "imagen": "img/zapatillas_ecorun.jpg",
+        "topSostenible": true,
+        "descuento": 0
+    },
+    {
+        "id": 2,
+        "nombre": "Camiseta Orgánica Trail",
+        "descripcion": "Camiseta técnica de algodón orgánico certificado GOTS, ideal para senderismo.",
+        "precio": 34.99,
+        "categoria": "montana",
+        "material": "organico",
+        "etiquetas": [
+            "organico",
+            "km-cero"
+        ],
+        "co2Ahorrado": 1.8,
+        "imagen": "img/camiseta_trail.jpg",
+        "topSostenible": false,
+        "descuento": 10
+    },
+    {
+        "id": 3,
+        "nombre": "Botella Reutilizable 750ml",
+        "descripcion": "Botella de acero inoxidable, libre de BPA, mantiene temperatura 24h.",
+        "precio": 24.99,
+        "categoria": "gym",
+        "material": "local",
+        "etiquetas": [
+            "duradero",
+            "km-cero"
+        ],
+        "co2Ahorrado": 2.5,
+        "imagen": "img/botella_acero.jpg",
+        "topSostenible": true,
+        "descuento": 0
+    },
+    {
+        "id": 4,
+        "nombre": "Mallas Compresión GreenFit",
+        "descripcion": "Mallas de compresión fabricadas con fibras recicladas de redes de pesca.",
+        "precio": 54.99,
+        "categoria": "gym",
+        "material": "reciclado",
+        "etiquetas": [
+            "baja-huella",
+            "reciclado"
+        ],
+        "co2Ahorrado": 3.1,
+        "imagen": "img/mallas_greenfit.jpg",
+        "topSostenible": false,
+        "descuento": 15
+    },
+    {
+        "id": 5,
+        "nombre": "Chaqueta Cortavientos Local",
+        "descripcion": "Chaqueta técnica producida localmente con materiales de bajo impacto.",
+        "precio": 79.99,
+        "categoria": "montana",
+        "material": "local",
+        "etiquetas": [
+            "km-cero",
+            "duradero"
+        ],
+        "co2Ahorrado": 5.0,
+        "imagen": "img/chaqueta_local.jpg",
+        "topSostenible": true,
+        "descuento": 0
+    },
+    {
+        "id": 6,
+        "nombre": "Calcetines Bambú Running",
+        "descripcion": "Pack de 3 calcetines técnicos de fibra de bambú antibacteriana.",
+        "precio": 18.99,
+        "categoria": "correr",
+        "material": "organico",
+        "etiquetas": [
+            "organico",
+            "duradero"
+        ],
+        "co2Ahorrado": 0.8,
+        "imagen": "img/calcetines_bambu.jpg",
+        "topSostenible": false,
+        "descuento": 0
+    },
+    {
+        "id": 7,
+        "nombre": "Esterilla Yoga Reciclada",
+        "descripcion": "Esterilla de yoga fabricada con caucho natural reciclado, antideslizante.",
+        "precio": 39.99,
+        "categoria": "gym",
+        "material": "reciclado",
+        "etiquetas": [
+            "reciclado",
+            "baja-huella"
+        ],
+        "co2Ahorrado": 2.2,
+        "imagen": "img/esterilla_yoga.jpg",
+        "topSostenible": true,
+        "descuento": 20
+    },
+    {
+        "id": 8,
+        "nombre": "Mochila Trekking EcoTrail",
+        "descripcion": "Mochila de 30L fabricada con poliéster reciclado de botellas plásticas.",
+        "precio": 64.99,
+        "categoria": "montana",
+        "material": "reciclado",
+        "etiquetas": [
+            "reciclado",
+            "duradero"
+        ],
+        "co2Ahorrado": 3.8,
+        "imagen": "img/mochila_ecotrail.jpg",
+        "topSostenible": false,
+        "descuento": 0
+    },
+    {
+        "id": 9,
+        "nombre": "Pantalón Corto BioRun",
+        "descripcion": "Pantalón corto transpirable de algodón orgánico para running.",
+        "precio": 29.99,
+        "categoria": "correr",
+        "material": "organico",
+        "etiquetas": [
+            "organico",
+            "baja-huella"
+        ],
+        "co2Ahorrado": 1.5,
+        "imagen": "img/pantalon_biorun.jpg",
+        "topSostenible": false,
+        "descuento": 5
+    },
+    {
+        "id": 10,
+        "nombre": "Toalla Microfibra Eco",
+        "descripcion": "Toalla compacta de secado rápido, fabricada con poliéster reciclado.",
+        "precio": 15.99,
+        "categoria": "gym",
+        "material": "reciclado",
+        "etiquetas": [
+            "reciclado",
+            "duradero"
+        ],
+        "co2Ahorrado": 1.0,
+        "imagen": "img/toalla_eco.jpg",
+        "topSostenible": false,
+        "descuento": 0
+    },
+    {
+        "id": 11,
+        "nombre": "Gorra Sol Protección UV",
+        "descripcion": "Gorra ligera con protección UV50+, tejido de cáñamo orgánico.",
+        "precio": 22.99,
+        "categoria": "montana",
+        "material": "organico",
+        "etiquetas": [
+            "organico",
+            "km-cero"
+        ],
+        "co2Ahorrado": 0.6,
+        "imagen": "img/gorra_uv.jpg",
+        "topSostenible": false,
+        "descuento": 0
+    },
+    {
+        "id": 12,
+        "nombre": "Banda Elástica Set x3",
+        "descripcion": "Set de bandas elásticas de látex natural, diferentes resistencias.",
+        "precio": 19.99,
+        "categoria": "gym",
+        "material": "local",
+        "etiquetas": [
+            "km-cero",
+            "duradero"
+        ],
+        "co2Ahorrado": 0.9,
+        "imagen": "img/bandas_elasticas.jpg",
+        "topSostenible": false,
+        "descuento": 10
+    }
+]
