@@ -8,5 +8,15 @@
     "objetivos": [
       "salud"
     ]
+  },
+  {
+    "id": 1765365003368,
+    "fecha": "2025-12-10T11:10:03.368Z",
+    "deporte": "running",
+    "nivel": "principiante",
+    "frecuencia": "1-2",
+    "objetivos": [
+      "salud"
+    ]
   }
 ]

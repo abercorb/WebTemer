@@ -189,6 +189,47 @@
                 </div>
             </section>
         </div>
+
+        <!-- Testimonios con formulario -->
+        <section class="testimonios_seccion">
+            <div class="testimonios_cabecera">
+                <div>
+                    <h2>Testimonios de la comunidad</h2>
+                    <p class="testimonios_intro">Comparte tu experiencia con equipamiento sostenible.</p>
+                </div>
+            </div>
+
+            <!-- Formulario para añadir testimonio -->
+            <form id="form_testimonio" class="form_testimonio" novalidate>
+                <div class="testimonio_campos">
+                    <div class="campo campo_small">
+                        <input type="text" id="testimonio_nombre" name="nombre" required placeholder="Tu nombre"
+                            maxlength="20">
+                    </div>
+                    <div class="campo campo_small">
+                        <select id="testimonio_deporte" name="deporte" required>
+                            <option value="">Deporte</option>
+                            <option value="Running">Running</option>
+                            <option value="Yoga">Yoga</option>
+                            <option value="Gym">Gym</option>
+                            <option value="Senderismo">Senderismo</option>
+                            <option value="Ciclismo">Ciclismo</option>
+                            <option value="Otro">Otro</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="campo">
+                    <textarea id="testimonio_texto" name="texto" required rows="2"
+                        placeholder="Cuéntanos tu experiencia con productos sostenibles..." maxlength="150"></textarea>
+                </div>
+                <button type="submit" class="btn btn_testimonio">Publicar testimonio</button>
+            </form>
+
+            <!-- Lista de testimonios -->
+            <div id="testimonios_lista" class="testimonios_grid">
+                <!-- Los testimonios se cargan dinámicamente -->
+            </div>
+        </section>
     </main>
 
     <footer class="footer">

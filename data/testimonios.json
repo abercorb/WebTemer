@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1765543520708,
+    "nombre": "pablo",
+    "deporte": "Running",
+    "texto": "me encanta correr, gracias a las zapas que me he pillado de aqui, lo hago mas comodo",
+    "fecha": "2025-12-12"
+  },
+  {
+    "id": 1,
+    "nombre": "María G.",
+    "deporte": "Running",
+    "texto": "Cambié a zapatillas recicladas hace un año. Mejoraron mis tiempos y cuido el planeta.",
+    "fecha": "2024-11-15"
+  },
+  {
+    "id": 2,
+    "nombre": "Carlos L.",
+    "deporte": "Yoga",
+    "texto": "La esterilla reciclada tiene mejor agarre que cualquier otra que haya probado.",
+    "fecha": "2024-10-20"
+  },
+  {
+    "id": 3,
+    "nombre": "Ana F.",
+    "deporte": "Senderismo",
+    "texto": "Equipé a mi grupo con ropa local. Apoyamos la economía de nuestra zona.",
+    "fecha": "2024-09-10"
+  }
+]

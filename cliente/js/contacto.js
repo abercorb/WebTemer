@@ -9,6 +9,12 @@ document.addEventListener("DOMContentLoaded", function () {
     const resumenPerfil = document.getElementById("resumen_perfil");
     const resumenContenido = document.getElementById("resumen_contenido");
     const recomendaciones = document.getElementById("recomendaciones");
+    const formTestimonio = document.getElementById("form_testimonio");
+    const testimoniosLista = document.getElementById("testimonios_lista");
+
+    // Cargar testimonios al iniciar
+    cargarTestimonios();
+
 
     // ============================================================
     // Validación del formulario de contacto
@@ -226,4 +232,73 @@ document.addEventListener("DOMContentLoaded", function () {
 
         resumenPerfil.classList.remove("oculto");
     }
+
+    // ============================================================
+    // Gestión de testimonios (API del servidor)
+    // ============================================================
+
+    async function cargarTestimonios() {
+        try {
+            const respuesta = await fetch("/testimonios");
+            const testimonios = await respuesta.json();
+
+            if (testimonios.length === 0) {
+                testimoniosLista.innerHTML = '<p class="testimonios_vacio">Sé el primero en compartir tu experiencia.</p>';
+                return;
+            }
+
+            testimoniosLista.innerHTML = testimonios.map(t => {
+                const iniciales = t.nombre.split(' ').map(n => n[0]).join('').toUpperCase().substring(0, 2);
+                return `
+                    <article class="testimonio_card">
+                        <div class="testimonio_avatar">${iniciales}</div>
+                        <div class="testimonio_contenido">
+                            <p class="testimonio_texto">${t.texto}</p>
+                            <div class="testimonio_autor">
+                                <div class="testimonio_info">
+                                    <span class="testimonio_nombre">${t.nombre}</span>
+                                    <span class="testimonio_deporte">${t.deporte}</span>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                `;
+            }).join('');
+        } catch (error) {
+            console.error('Error al cargar testimonios:', error);
+            testimoniosLista.innerHTML = '<p class="testimonios_vacio">Error al cargar testimonios.</p>';
+        }
+    }
+
+    // Event listener para formulario de testimonio
+    if (formTestimonio) {
+        formTestimonio.addEventListener('submit', async function (e) {
+            e.preventDefault();
+
+            const nombre = document.getElementById('testimonio_nombre').value.trim();
+            const deporte = document.getElementById('testimonio_deporte').value;
+            const texto = document.getElementById('testimonio_texto').value.trim();
+
+            if (nombre && deporte && texto) {
+                try {
+                    const respuesta = await fetch("/testimonios", {
+                        method: "POST",
+                        headers: { "Content-Type": "application/json" },
+                        body: JSON.stringify({ nombre, deporte, texto })
+                    });
+
+                    if (respuesta.ok) {
+                        formTestimonio.reset();
+                        cargarTestimonios(); // Recargar lista
+                    } else {
+                        alert("Error al guardar el testimonio.");
+                    }
+                } catch (error) {
+                    console.error('Error:', error);
+                    alert("Error de conexión.");
+                }
+            }
+        });
+    }
 });
+

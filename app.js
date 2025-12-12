@@ -137,6 +137,81 @@ app.post("/perfil", (req, res) => {
 });
 
 // ============================================================
+// RUTA GET /testimonios - Devuelve la lista de testimonios
+// ============================================================
+app.get("/testimonios", (req, res) => {
+    const rutaTestimonios = path.join(__dirname, "data", "testimonios.json");
+
+    fs.readFile(rutaTestimonios, "utf-8", (error, datos) => {
+        if (error) {
+            console.error("Error al leer testimonios.json:", error);
+            return res.json([]);
+        }
+
+        try {
+            const testimonios = JSON.parse(datos);
+            res.json(testimonios);
+        } catch (parseError) {
+            console.error("Error al parsear testimonios.json:", parseError);
+            res.json([]);
+        }
+    });
+});
+
+// ============================================================
+// RUTA POST /testimonios - Guarda un nuevo testimonio
+// ============================================================
+app.post("/testimonios", (req, res) => {
+    const { nombre, deporte, texto } = req.body;
+
+    // Validación básica
+    if (!nombre || !deporte || !texto) {
+        return res.status(400).json({ error: "Todos los campos son obligatorios" });
+    }
+
+    // Crear objeto de testimonio
+    const testimonio = {
+        id: Date.now(),
+        nombre: nombre.length > 20 ? nombre.substring(0, 20) + "." : nombre,
+        deporte,
+        texto: texto.length > 150 ? texto.substring(0, 150) + "..." : texto,
+        fecha: new Date().toISOString().split('T')[0]
+    };
+
+    // Guardar en archivo JSON
+    const rutaTestimonios = path.join(__dirname, "data", "testimonios.json");
+
+    fs.readFile(rutaTestimonios, "utf-8", (error, datos) => {
+        let testimonios = [];
+        if (!error) {
+            try {
+                testimonios = JSON.parse(datos);
+            } catch (e) {
+                testimonios = [];
+            }
+        }
+
+        // Añadir al principio
+        testimonios.unshift(testimonio);
+
+        // Limitar a 20 testimonios
+        if (testimonios.length > 20) {
+            testimonios = testimonios.slice(0, 20);
+        }
+
+        fs.writeFile(rutaTestimonios, JSON.stringify(testimonios, null, 2), (error) => {
+            if (error) {
+                console.error("Error al guardar testimonio:", error);
+                return res.status(500).json({ error: "Error al guardar el testimonio" });
+            }
+
+            console.log(`💬 Nuevo testimonio de ${nombre} - ${deporte}`);
+            res.json({ mensaje: "Testimonio guardado correctamente", testimonio });
+        });
+    });
+});
+
+// ============================================================
 // Iniciar servidor
 // ============================================================
 app.listen(PORT, () => {
