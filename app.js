@@ -93,7 +93,7 @@ app.post("/contacto", (req, res) => {
 // ============================================================
 app.post("/perfil", (req, res) => {
     const { deporte, nivel, frecuencia, objetivos } = req.body;
-
+    console.log("Perfil recibido:", req.body)
     // Validación básica
     if (!deporte || !nivel || !frecuencia) {
         return res.status(400).json({ error: "Los campos principales son obligatorios" });
@@ -111,7 +111,8 @@ app.post("/perfil", (req, res) => {
 
     // Guardar en archivo JSON
     const rutaPerfiles = path.join(__dirname, "data", "perfiles.json");
-
+    console.log("__dirname",__dirname)
+    console.log("rutaPerfiles",rutaPerfiles)
     fs.readFile(rutaPerfiles, "utf-8", (error, datos) => {
         let perfiles = [];
         if (!error) {

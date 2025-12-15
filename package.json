@@ -1,5 +1,16 @@
 {
+  "name": "webtemer",
+  "version": "1.0.0",
+  "description": "SportEco - Aplicación web de productos deportivos sostenibles",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+  },
   "dependencies": {
     "express": "^5.2.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.9"
   }
 }

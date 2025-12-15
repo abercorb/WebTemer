@@ -1,53 +1,59 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const menuBtn = document.getElementById("menu");
-  const navMenu = document.getElementById("nav_menu");
-  const navOverlay = document.getElementById("nav_overlay");
-  const odsBtn = document.getElementById("btn_ods_extra");
-  const odsExtra = document.getElementById("ods_extra");
+  const botonMenu = document.getElementById("menu");
+  const menuNavegacion = document.getElementById("nav_menu");
+  const capaFondoMenu = document.getElementById("nav_overlay");
+  const botonMostrarOds = document.getElementById("btn_ods_extra");
+  const contenedorTextoOds = document.getElementById("ods_extra");
 
-  function abrirMenu() {
-    navMenu.classList.add("nav_menu--open");
-    navOverlay.classList.add("nav_overlay--visible");
-    menuBtn.setAttribute("aria-expanded", "true");
-  }
+  inicializarInterfaz();
 
-  function cerrarMenu() {
-    navMenu.classList.remove("nav_menu--open");
-    navOverlay.classList.remove("nav_overlay--visible");
-    menuBtn.setAttribute("aria-expanded", "false");
-  }
+  function inicializarInterfaz() {
+    if (botonMenu) {
+      botonMenu.addEventListener("click", alternarEstadoMenu);
+    }
 
-  if (menuBtn) {
-    menuBtn.addEventListener("click", function () {
-      const abierto = navMenu.classList.contains("nav_menu--open");
-      if (abierto) {
-        cerrarMenu();
-      } else {
-        abrirMenu();
-      }
+    if (capaFondoMenu) {
+      capaFondoMenu.addEventListener("click", cerrarMenuNavegacion);
+    }
+
+    menuNavegacion.querySelectorAll("a").forEach(function (enlace) {
+      enlace.addEventListener("click", cerrarMenuNavegacion);
     });
+
+    if (botonMostrarOds && contenedorTextoOds) {
+      botonMostrarOds.addEventListener("click", alternarInformacionOds);
+    }
   }
 
-  if (navOverlay) {
-    navOverlay.addEventListener("click", cerrarMenu);
+  function alternarEstadoMenu() {
+    const estaAbierto = menuNavegacion.classList.contains("nav_menu--open");
+    if (estaAbierto) {
+      cerrarMenuNavegacion();
+    } else {
+      abrirMenuNavegacion();
+    }
   }
 
-  // Cerrar menú al hacer clic en un enlace
-  navMenu.querySelectorAll("a").forEach(function (enlace) {
-    enlace.addEventListener("click", cerrarMenu);
-  });
+  function abrirMenuNavegacion() {
+    menuNavegacion.classList.add("nav_menu--open");
+    capaFondoMenu.classList.add("nav_overlay--visible");
+    botonMenu.setAttribute("aria-expanded", "true");
+  }
 
-  // Mostrar / ocultar texto extra ODS
-  if (odsBtn && odsExtra) {
-    odsBtn.addEventListener("click", function () {
-      const oculto = odsExtra.classList.contains("ods_extra_escondido");
-      if (oculto) {
-        odsExtra.classList.remove("ods_extra_escondido");
-        odsBtn.textContent = "Ocultar información";
-      } else {
-        odsExtra.classList.add("ods_extra_escondido");
-        odsBtn.textContent = "Saber más sobre nuestro impacto";
-      }
-    });
+  function cerrarMenuNavegacion() {
+    menuNavegacion.classList.remove("nav_menu--open");
+    capaFondoMenu.classList.remove("nav_overlay--visible");
+    botonMenu.setAttribute("aria-expanded", "false");
+  }
+
+  function alternarInformacionOds() {
+    const estaOculto = contenedorTextoOds.classList.contains("ods_extra_escondido");
+    if (estaOculto) {
+      contenedorTextoOds.classList.remove("ods_extra_escondido");
+      botonMostrarOds.textContent = "Ocultar información";
+    } else {
+      contenedorTextoOds.classList.add("ods_extra_escondido");
+      botonMostrarOds.textContent = "Saber más sobre nuestro impacto";
+    }
   }
 });

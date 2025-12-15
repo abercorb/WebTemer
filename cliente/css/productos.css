@@ -313,6 +313,27 @@
   border-color: #fecaca;
 }
 
+.btn_carrito {
+  background-color: #059669;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  margin-left: 0.5rem;
+}
+
+.btn_carrito:hover {
+  background-color: #047857;
+}
+
+.btn_carrito.agregado {
+  background-color: #374151;
+}
+
 /* ===== Modal de favoritos ===== */
 .modal {
   position: fixed;

@@ -18,5 +18,165 @@
     "objetivos": [
       "salud"
     ]
+  },
+  {
+    "id": 1765626228549,
+    "fecha": "2025-12-13T11:43:48.549Z",
+    "deporte": "running",
+    "nivel": "principiante",
+    "frecuencia": "1-2",
+    "objetivos": [
+      "rendimiento"
+    ]
+  },
+  {
+    "id": 1765626252808,
+    "fecha": "2025-12-13T11:44:12.808Z",
+    "deporte": "running",
+    "nivel": "principiante",
+    "frecuencia": "1-2",
+    "objetivos": [
+      "rendimiento"
+    ]
+  },
+  {
+    "id": 1765626253848,
+    "fecha": "2025-12-13T11:44:13.848Z",
+    "deporte": "running",
+    "nivel": "principiante",
+    "frecuencia": "1-2",
+    "objetivos": [
+      "rendimiento"
+    ]
+  },
+  {
+    "id": 1765626265022,
+    "fecha": "2025-12-13T11:44:25.022Z",
+    "deporte": "running",
+    "nivel": "principiante",
+    "frecuencia": "1-2",
+    "objetivos": [
+      "rendimiento"
+    ]
+  },
+  {
+    "id": 1765626270003,
+    "fecha": "2025-12-13T11:44:30.003Z",
+    "deporte": "running",
+    "nivel": "principiante",
+    "frecuencia": "1-2",
+    "objetivos": [
+      "rendimiento"
+    ]
+  },
+  {
+    "id": 1765626298651,
+    "fecha": "2025-12-13T11:44:58.651Z",
+    "deporte": "running",
+    "nivel": "principiante",
+    "frecuencia": "1-2",
+    "objetivos": [
+      "rendimiento",
+      "huella"
+    ]
+  },
+  {
+    "id": 1765626305165,
+    "fecha": "2025-12-13T11:45:05.165Z",
+    "deporte": "running",
+    "nivel": "principiante",
+    "frecuencia": "1-2",
+    "objetivos": [
+      "rendimiento",
+      "huella"
+    ]
+  },
+  {
+    "id": 1765626406256,
+    "fecha": "2025-12-13T11:46:46.256Z",
+    "deporte": "running",
+    "nivel": "principiante",
+    "frecuencia": "1-2",
+    "objetivos": [
+      "rendimiento",
+      "huella",
+      "bienestar"
+    ]
+  },
+  {
+    "id": 1765626804083,
+    "fecha": "2025-12-13T11:53:24.083Z",
+    "deporte": "running",
+    "nivel": "principiante",
+    "frecuencia": "1-2",
+    "objetivos": [
+      "rendimiento",
+      "huella",
+      "bienestar"
+    ]
+  },
+  {
+    "id": 1765629261186,
+    "fecha": "2025-12-13T12:34:21.186Z",
+    "deporte": "running",
+    "nivel": "principiante",
+    "frecuencia": "3-4",
+    "objetivos": [
+      "rendimiento",
+      "huella"
+    ]
+  },
+  {
+    "id": 1765629646908,
+    "fecha": "2025-12-13T12:40:46.908Z",
+    "deporte": "running",
+    "nivel": "principiante",
+    "frecuencia": "3-4",
+    "objetivos": [
+      "rendimiento",
+      "huella"
+    ]
+  },
+  {
+    "id": 1765629829875,
+    "fecha": "2025-12-13T12:43:49.875Z",
+    "deporte": "running",
+    "nivel": "principiante",
+    "frecuencia": "3-4",
+    "objetivos": [
+      "rendimiento",
+      "huella"
+    ]
+  },
+  {
+    "id": 1765629883641,
+    "fecha": "2025-12-13T12:44:43.641Z",
+    "deporte": "running",
+    "nivel": "principiante",
+    "frecuencia": "3-4",
+    "objetivos": [
+      "rendimiento",
+      "huella"
+    ]
+  },
+  {
+    "id": 1765630802512,
+    "fecha": "2025-12-13T13:00:02.512Z",
+    "deporte": "running",
+    "nivel": "principiante",
+    "frecuencia": "3-4",
+    "objetivos": [
+      "rendimiento"
+    ]
+  },
+  {
+    "id": 1765799009420,
+    "fecha": "2025-12-15T11:43:29.420Z",
+    "deporte": "running",
+    "nivel": "principiante",
+    "frecuencia": "1-2",
+    "objetivos": [
+      "rendimiento"
+    ]
   }
 ]
