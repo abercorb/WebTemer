@@ -96,7 +96,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     </div>
 
                     <button class="btn_eliminar" onclick="eliminarProductoDelCarrito(${producto.id})" aria-label="Eliminar producto">
-                        🗑️
+                        Eliminar
                     </button>
                 </div>
             </article>

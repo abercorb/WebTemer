@@ -21,44 +21,7 @@
     margin: 0 auto;
 }
 
-/* ===== Sección ODS ===== */
-.ods_seccion {
-    margin-bottom: 2rem;
-}
 
-.ods_contenedor {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 1rem;
-}
-
-.ods_item {
-    padding: 1rem;
-    background-color: #f9fafb;
-    border-radius: 8px;
-    border: 1px solid #e5e7eb;
-}
-
-.ods_badge {
-    display: inline-block;
-    padding: 0.3rem 0.6rem;
-    background-color: #059669;
-    color: white;
-    border-radius: 4px;
-    font-size: 0.8rem;
-    font-weight: 600;
-    margin-bottom: 0.5rem;
-}
-
-.ods_badge_12 {
-    background-color: #ca8a04;
-}
-
-.ods_item p {
-    font-size: 0.9rem;
-    color: #4b5563;
-    line-height: 1.5;
-}
 
 /* ===== Contenedor de formularios ===== */
 .formularios_contenedor {

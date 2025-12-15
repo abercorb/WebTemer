@@ -16,6 +16,10 @@ document.addEventListener("DOMContentLoaded", function () {
     let listaIdsFavoritos = obtenerFavoritosDeAlmacenamiento();
     let carritoCompras = obtenerCarritoDeAlmacenamiento();
 
+    const ICONO_CORAZON_VACIO = `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>`;
+    const ICONO_CORAZON_LLENO = `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #ef4444;"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>`;
+
+
     inicializarAplicacion();
 
     function inicializarAplicacion() {
@@ -164,8 +168,9 @@ document.addEventListener("DOMContentLoaded", function () {
                     <button type="button" 
                             class="btn_favorito ${esFavorito ? 'activo' : ''}" 
                             data-id="${producto.id}"
+                            data-id="${producto.id}"
                             aria-label="${esFavorito ? 'Quitar de favoritos' : 'Añadir a favoritos'}">
-                        ${esFavorito ? '♥' : '♡'}
+                        ${esFavorito ? ICONO_CORAZON_LLENO : ICONO_CORAZON_VACIO}
                     </button>
                     <button type="button" 
                             class="btn_carrito" 
@@ -207,12 +212,12 @@ document.addEventListener("DOMContentLoaded", function () {
         if (listaIdsFavoritos.includes(idProducto)) {
             listaIdsFavoritos = listaIdsFavoritos.filter(id => id !== idProducto);
             boton.classList.remove('activo');
-            boton.innerHTML = '♡';
+            boton.innerHTML = ICONO_CORAZON_VACIO;
             boton.setAttribute('aria-label', 'Añadir a favoritos');
         } else {
             listaIdsFavoritos.push(idProducto);
             boton.classList.add('activo');
-            boton.innerHTML = '♥';
+            boton.innerHTML = ICONO_CORAZON_LLENO;
             boton.setAttribute('aria-label', 'Quitar de favoritos');
         }
 
@@ -348,7 +353,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const botonEnGrid = document.querySelector(`.btn_favorito[data-id="${idProducto}"]`);
         if (botonEnGrid) {
             botonEnGrid.classList.remove('activo');
-            botonEnGrid.innerHTML = '♡';
+            botonEnGrid.innerHTML = ICONO_CORAZON_VACIO;
             botonEnGrid.setAttribute('aria-label', 'Añadir a favoritos');
         }
     }

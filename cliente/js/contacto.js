@@ -43,6 +43,11 @@ document.addEventListener("DOMContentLoaded", function () {
             formularioContacto.reset();
             formularioContacto.style.display = "none";
             mensajeExitoContacto.classList.remove("oculto");
+
+            setTimeout(() => {
+                mensajeExitoContacto.classList.add("oculto");
+                formularioContacto.style.display = "block";
+            }, 5000);
         } catch (error) {
             console.error("Error envío contacto:", error);
             alert("Error al enviar el formulario. Inténtalo de nuevo.");

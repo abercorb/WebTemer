@@ -35,40 +35,7 @@
 }
 
 /* ===== Información ODS ===== */
-.ods_info {
-  margin-top: 1.5rem;
-  padding: 1rem;
-  background-color: #f9fafb;
-  border-radius: 8px;
-  border: 1px solid #e5e7eb;
-}
 
-.ods_badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 0.4rem 0.8rem;
-  border-radius: 6px;
-  font-weight: 500;
-  font-size: 0.85rem;
-  background-color: #059669;
-  color: white;
-}
-
-.ods_numero {
-  font-size: 0.8rem;
-}
-
-.ods_texto {
-  font-size: 0.85rem;
-}
-
-.ods_descripcion {
-  margin-top: 0.8rem;
-  font-size: 0.9rem;
-  color: #6b7280;
-  text-align: center;
-}
 
 /* ===== Sección de filtros ===== */
 .filtros_seccion {
