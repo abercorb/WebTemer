@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Resumen de Pedido | SportEco</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Finaliza tu compra de productos sostenibles en SportEco." />
+    <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="css/compra.css" />
+    <script defer src="js/index.js"></script>
+    <script defer src="js/compra.js"></script>
+</head>
+
+<body>
+    <header class="topbar">
+        <div class="topbar_logo">
+            <img src="img/logo_sporteco.png" alt="Logo de SportEco" />
+            <span>SportEco</span>
+        </div>
+
+        <button class="topbar_menu" id="menu" aria-label="Abrir menú de navegación" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <nav class="nav_menu" id="nav_menu" aria-label="Navegación principal">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="productos.html">Productos sostenibles</a></li>
+                <li><a href="compra.html" class="nav_activo">Cesta</a></li>
+                <li><a href="contacto.html">Contacto y soporte</a></li>
+            </ul>
+        </nav>
+
+        <div class="nav_overlay" id="nav_overlay"></div>
+    </header>
+
+    <main class="compra_main">
+        <section class="compra_cabecera">
+            <h1>Cesta de la Compra</h1>
+            <p>Revisa tus productos sostenibles antes de finalizar el pedido.</p>
+        </section>
+
+        <div class="compra_layout" id="compra_layout">
+            <!-- Sección de productos -->
+            <section class="compra_productos">
+                <div id="lista_carrito" class="lista_carrito">
+                    <!-- Dinámico -->
+                    <p class="cargando_texto">Cargando tu cesta...</p>
+                </div>
+            </section>
+
+            <!-- Resumen de costes -->
+            <section class="compra_resumen">
+                <div class="resumen_card">
+                    <h2>Resumen del Pedido</h2>
+
+                    <div class="resumen_fila">
+                        <span>Subtotal</span>
+                        <span id="resumen_subtotal">0.00€</span>
+                    </div>
+
+                    <div class="resumen_fila descuento">
+                        <span>Ahorro total</span>
+                        <span id="resumen_ahorro">-0.00€</span>
+                    </div>
+
+                    <div class="resumen_total">
+                        <span>Total (IVA inc.)</span>
+                        <span id="resumen_total">0.00€</span>
+                    </div>
+
+                    <div class="co2_total" id="co2_total_container" style="display: none;">
+                        <span class="co2_icon">🌱</span>
+                        <span>Estás ahorrando <strong id="resumen_co2">0</strong> kg de CO₂</span>
+                    </div>
+
+                    <button type="button" id="btn_tramitar" class="btn_tramitar">
+                        Tramitar Pedido
+                    </button>
+
+                    <a href="productos.html" class="link_seguir_comprando">Seguir comprando</a>
+                </div>
+            </section>
+        </div>
+
+        <!-- Estado vacío (oculto por defecto) -->
+        <div id="cesta_vacia" class="cesta_vacia" style="display: none;">
+            <div class="icono_vacio">🛒</div>
+            <h2>Tu cesta está vacía</h2>
+            <p>Parece que aún no has añadido ningún producto sostenible.</p>
+            <a href="productos.html" class="btn_explorar">Ver catálogo</a>
+        </div>
+
+        <!-- Modal de éxito tras compra -->
+        <div id="modal_compra" class="modal_compra" aria-hidden="true" style="display: none;">
+            <div class="modal_contenido_exito">
+                <div class="icono_exito">✓</div>
+                <h2>¡Pedido Realizado!</h2>
+                <p>Gracias por tu compra sostenible. Hemos recibido tu pedido correctamente.</p>
+                <button id="btn_cerrar_exito" class="btn_cerrar_exito">Volver al inicio</button>
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="footer">
+        <p>
+            &copy; 2025 SportEco · Proyecto web alineado con el futuro sostenible
+        </p>
+    </footer>
+</body>
+
+</html>
